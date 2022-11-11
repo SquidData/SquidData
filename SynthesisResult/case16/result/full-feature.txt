@@ -1,0 +1,11 @@
+predicate output(int id, int startLineNumber){
+    exists(LabeledStatement a1, string s0) {
+        s0 = a1.getLabel()
+                and
+        equal(s0, "err")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

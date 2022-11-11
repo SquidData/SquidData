@@ -1,0 +1,8 @@
+{
+    "description": "For-statements with a boolean literal as the condition",
+    "syntactic notions": [
+        "for",
+        "condition",
+        "literal"
+    ]
+}

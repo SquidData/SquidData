@@ -1,0 +1,8 @@
+{
+    "description": "Public methods with void return type",
+    "syntactic notions": [
+      "method",
+      "modifier",
+      "type"
+    ]
+}

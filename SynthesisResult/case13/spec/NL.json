@@ -1,0 +1,7 @@
+{
+    "description": "Expressions performing downcasting",
+    "syntactic notions": [
+        "class",
+        "type"
+    ]
+}

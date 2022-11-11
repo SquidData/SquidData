@@ -1,0 +1,6 @@
+{
+    "description": "Invocation of unsafe time function localtime",
+    "syntactic notions": [
+        "Method"
+    ]
+}

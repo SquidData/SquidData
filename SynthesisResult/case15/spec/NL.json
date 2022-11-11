@@ -1,0 +1,7 @@
+{
+    "description": "The import of the classes in log4j",
+    "syntactic notions": [
+        "import",
+        "class"
+    ]
+}

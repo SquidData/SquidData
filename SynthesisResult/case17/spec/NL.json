@@ -1,0 +1,7 @@
+{
+    "description": "If-statements with a boolean literal as a condition",
+    "syntactic notions": [
+      "condition",
+      "literal"
+    ]
+}

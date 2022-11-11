@@ -1,0 +1,41 @@
+predicate output(int id, int startLineNumber){
+    exists(UnaryExpression a1, ReferenceExpression a2, Type a3, string s0, string s1) {
+        a3=a2.getRefExprType()
+                and
+        a2=a1.getOperand()
+                and
+        s0 = a1.getOpcode()
+                and
+        equal(s0, "PLUSPLUS")
+                and
+        s1 = a3.getName()
+                and
+        equal(s1, "float")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}
+----------------------------------------------------------
+predicate output(int id, int startLineNumber){
+    exists(UnaryExpression a1, Expression a2, ReferenceExpression a3, Type a4, string s0, string s1) {
+        a4=a3.getRefExprType()
+                and
+        a3=a1.getOperand()
+                and
+        a2=a1.getOperand()
+                and
+        s0 = a1.getOpcode()
+                and
+        equal(s0, "PLUSPLUS")
+                and
+        s1 = a4.getName()
+                and
+        equal(s1, "float")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

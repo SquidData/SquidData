@@ -1,0 +1,8 @@
+{
+    "description": "Expressions comparing two strings with \"==\" ",
+    "syntactic notions": [
+        "expression",
+        "comparison",
+        "type"
+    ]
+}
