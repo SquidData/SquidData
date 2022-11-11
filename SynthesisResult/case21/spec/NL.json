@@ -1,0 +1,8 @@
+{
+    "description": "Methods receiving a parameter with Log4jUtils type",
+    "syntactic notions": [
+      "Method",
+      "Parameter",
+      "Type"
+    ]
+}

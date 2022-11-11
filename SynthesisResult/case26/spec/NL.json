@@ -1,0 +1,7 @@
+{
+    "description": "User classes with \"login\" methods",
+    "syntactic notions": [
+        "method",
+        "class"
+    ]
+}

@@ -1,0 +1,31 @@
+predicate output(int id, int startLineNumber){
+    exists(Class a1, Method a2, Type a3, string s0) {
+        a1=a2.getBelongedClass()
+                and
+        a3=a2.getType()
+                and
+        s0 = a3.getName()
+                and
+        equal(s0, "void")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}
+----------------------------------------------------------
+predicate output(int id, int startLineNumber){
+    exists(Class a1, Method a2, Modifier a3, string s0) {
+        a1=a2.getBelongedClass()
+                and
+        a3=a2.getModifier()
+                and
+        s0 = a3.getName()
+                and
+        equal(s0, "static")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

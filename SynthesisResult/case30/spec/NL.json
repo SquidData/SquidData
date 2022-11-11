@@ -1,0 +1,8 @@
+{
+    "description": "Classes containing a static method",
+    "syntactic notions": [
+        "method",
+        "class",
+        "modifier"
+    ]
+}

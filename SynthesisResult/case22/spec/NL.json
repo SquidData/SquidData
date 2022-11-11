@@ -1,0 +1,8 @@
+{
+    "description": "Methods using a boolean parameter as a if-condition",
+    "syntactic notions": [
+      "method",
+      "parameter",
+      "if"
+    ]
+}
