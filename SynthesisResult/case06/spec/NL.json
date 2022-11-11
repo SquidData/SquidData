@@ -1,0 +1,7 @@
+{
+    "description": "Cast expressions from double-type to float-type",
+    "syntactic notions": [
+      "type",
+      "cast"
+    ]
+}

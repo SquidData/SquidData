@@ -1,0 +1,7 @@
+{
+    "description": "Local variables with double type",
+    "syntactic notions": [
+      "variable",
+      "type"
+    ]
+}

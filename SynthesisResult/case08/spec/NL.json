@@ -1,0 +1,8 @@
+{
+    "description": "Expressions comparing a variable and a boolean literal",
+    "syntactic notions": [
+        "comparison",
+        "boolean",
+        "literal"
+    ]
+}

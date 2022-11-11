@@ -1,0 +1,7 @@
+{
+    "description": "Public field variables whose names use ``cash'' as suffixes",
+    "syntactic notions": [
+      "field",
+      "modifier"
+    ]
+}

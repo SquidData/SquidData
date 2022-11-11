@@ -1,0 +1,8 @@
+{
+    "description": "Logical conjunctions with a boolean literal",
+    "syntactic notions": [
+        "literal",
+        "operand",
+        "and"
+    ]
+}

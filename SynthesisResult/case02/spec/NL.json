@@ -1,0 +1,8 @@
+{
+    "description": "Float variables of which the identifier contains \"cash\"",
+    "syntactic notions": [
+      "variable",
+      "type",
+      "identifier"
+    ]
+}

@@ -1,0 +1,27 @@
+predicate output(int id, int startLineNumber){
+    exists(BinaryExpression a1, Literal a2, Literal a3) {
+        a2=a1.getRightOperandExpression()
+                and
+        a3=a1.getLeftOperandExpression()
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}
+----------------------------------------------------------
+predicate output(int id, int startLineNumber){
+    exists(BinaryExpression a1, Literal a2, Literal a3, string s0) {
+        a2=a1.getRightOperandExpression()
+                and
+        a3=a1.getLeftOperandExpression()
+                and
+        s0 = a1.getKind()
+                and
+        equal(s0, "ArithmeticExpression")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

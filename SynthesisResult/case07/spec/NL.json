@@ -1,0 +1,6 @@
+{
+    "description": "Arithmetic expression only using literals as operands",
+    "syntactic notions": [
+      "literal"
+    ]
+}

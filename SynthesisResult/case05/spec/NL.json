@@ -1,0 +1,7 @@
+{
+    "description": "Arithmetic expressions using double-type operands",
+    "syntactic notions": [
+        "expression",
+        "type"
+    ]
+}

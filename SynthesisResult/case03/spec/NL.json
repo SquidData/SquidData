@@ -1,0 +1,8 @@
+{
+    "description": "Public field variables of a class",
+    "syntactic notions": [
+        "field",
+        "class",
+        "modifier"
+    ]
+}
