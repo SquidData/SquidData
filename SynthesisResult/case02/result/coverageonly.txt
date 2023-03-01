@@ -1,0 +1,23 @@
+predicate output(int id, int startLineNumber){
+    exists(LocalVariable a1, Identifier a2, Type a3, string s0, string s1, string s2) {
+        a2=a1.getIdentifier()
+                and
+        a3=a1.getType()
+                and
+        s0 = a1.getName()
+                and
+        contains(s0, "cash")
+                and
+        s1 = a2.getName()
+                and
+        contains(s1, "cash")
+                and
+        s2 = a3.getName()
+                and
+        equal(s2, "float")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

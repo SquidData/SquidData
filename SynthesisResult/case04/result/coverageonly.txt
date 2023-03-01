@@ -1,0 +1,17 @@
+predicate output(int id, int startLineNumber){
+    exists(Field a1, Modifier a2, string s0, string s1) {
+        a2=a1.getModifier()
+                and
+        s0 = a1.getName()
+                and
+        suffix(s0, "cash")
+                and
+        s1 = a2.getName()
+                and
+        equal(s1, "public")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

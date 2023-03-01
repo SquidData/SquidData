@@ -1,0 +1,67 @@
+predicate output(int id, int startLineNumber){
+    exists(LocalVariable a1, Type a2, Identifier a3, string s0, string s1, string s2) {
+        a3=a1.getIdentifier()
+                and
+        a2=a1.getType()
+                and
+        s0 = a3.getName()
+                and
+        equal(s0, "cashAmount")
+                and
+        s1 = a1.getName()
+                and
+        equal(s1, "cashAmount")
+                and
+        s2 = a2.getName()
+                and
+        equal(s2, "float")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+     or
+     exists(LocalVariable a1, Identifier a2, Type a3, string s0, string s1, string s2) {
+        a3=a1.getType()
+                and
+        a2=a1.getIdentifier()
+                and
+        s0 = a2.getName()
+                and
+        equal(s0, "cash")
+                and
+        s1 = a1.getName()
+                and
+        equal(s1, "cash")
+                and
+        s2 = a3.getName()
+                and
+        equal(s2, "float")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+     or
+     exists(LocalVariable a1, Identifier a2, Type a3, string s0, string s1, string s2) {
+        a3=a1.getType()
+                and
+        a2=a1.getIdentifier()
+                and
+        s0 = a1.getName()
+                and
+        equal(s0, "pubcash")
+                and
+        s1 = a3.getName()
+                and
+        equal(s1, "float")
+                and
+        s2 = a2.getName()
+                and
+        equal(s2, "pubcash")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

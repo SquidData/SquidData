@@ -1,0 +1,31 @@
+predicate output(int id, int startLineNumber){
+    exists(BinaryExpression a1, ReferenceExpression a2, Type a3) {
+        a2=a1.getOperand()
+                and
+        a3=a2.getRefExprType()
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}
+----------------------------------------------------------
+predicate output(int id, int startLineNumber){
+    exists(BinaryExpression a1, ReferenceExpression a2, Type a3, string s0, string s1) {
+        a2=a1.getOperand()
+                and
+        a3=a2.getRefExprType()
+                and
+        s0 = a1.getKind()
+                and
+        equal(s0, "ArithmeticExpression")
+                and
+        s1 = a3.getName()
+                and
+        equal(s1, "double")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

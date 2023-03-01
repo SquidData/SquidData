@@ -1,0 +1,7 @@
+predicate output(int id, int startLineNumber){
+    exists(BinaryExpression a1) {
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+    }
+}

@@ -1,0 +1,21 @@
+predicate output(int id, int startLineNumber){
+    exists(Field a1, string s0) {
+        s0 = a1.getName()
+                and
+        equal(s0, "k")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+    }
+    or
+    exists(Field a1, string s0) {
+        s0 = a1.getName()
+                and
+        equal(s0, "j")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+    }
+}

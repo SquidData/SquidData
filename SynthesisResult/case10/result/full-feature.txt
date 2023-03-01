@@ -1,0 +1,35 @@
+predicate output(int id, int startLineNumber){
+    exists(BinaryExpression a1, BooleanLiteral a2, string s0, string s1) {
+        a2=a1.getOperand()
+                and
+        s0 = a1.getOpcode()
+                and
+        equal(s0, "&&")
+                and
+        s1 = a1.getKind()
+                and
+        equal(s1, "AndLogicalExpression")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}
+----------------------------------------------------------
+predicate output(int id, int startLineNumber){
+    exists(BinaryExpression a1, Literal a2, string s0, string s1) {
+        a2=a1.getOperand()
+                and
+        s0 = a1.getOpcode()
+                and
+        equal(s0, "&&")
+                and
+        s1 = a1.getKind()
+                and
+        equal(s1, "AndLogicalExpression")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

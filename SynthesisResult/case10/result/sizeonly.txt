@@ -1,0 +1,20 @@
+predicate output(int id, int startLineNumber){
+    exists(BinaryExpression a1, BooleanLiteral a2) {
+        a2=a1.getOperand()
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}
+----------------------------------------------------------
+predicate output(int id, int startLineNumber){
+    exists(BinaryExpression a1, Literal a2) {
+        a2=a1.getOperand()
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}
+----------------------------------------------------------

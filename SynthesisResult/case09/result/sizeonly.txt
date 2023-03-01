@@ -1,0 +1,13 @@
+predicate output(int id, int startLineNumber){
+    exists(NewExpression a1, Type a2, string s0) {
+        a2=a1.getType()
+                and
+        s0 = a2.getName()
+                and
+        prefix(s0, "ArrayList<")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}
