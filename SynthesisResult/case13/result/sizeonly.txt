@@ -1,0 +1,35 @@
+predicate output(int id, int startLineNumber){
+    exists(TypeCastExpression a1, Class a2, ClassHierarchy a3) {
+        a2=a1.getSrcClassType()
+                and
+        a2=a3.getSuperClass()
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}
+----------------------------------------------------------
+predicate output(int id, int startLineNumber){
+    exists(TypeCastExpression a1, Class a2, ClassHierarchy a3) {
+        a2=a1.getSrcClassType()
+                and
+        a2=a3.getSubClass()
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}
+----------------------------------------------------------
+predicate output(int id, int startLineNumber){
+    exists(TypeCastExpression a1, Class a2, ClassHierarchy a3) {
+        a2=a1.getCastClassType()
+                and
+        a2=a3.getClass()
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

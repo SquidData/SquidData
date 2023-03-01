@@ -1,0 +1,23 @@
+predicate output(int id, int startLineNumber){
+    exists(BinaryExpression a1, ReferenceExpression a2, Type a3, string s0, string s1, string s2) {
+        a3=a2.getRefExprType()
+                and
+        a2=a1.getRightOperandExpression()
+                and
+        s0 = a1.getOpcode()
+                and
+        equal(s0, "==")
+                and
+        s1 = a1.getKind()
+                and
+        equal(s1, "ComparisonExpression")
+                and
+        s2 = a3.getName()
+                and
+        equal(s2, "String")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

@@ -1,0 +1,15 @@
+predicate output(int id, int startLineNumber){
+    exists(Import a1, string s0, string s1) {
+        s0 = a1.getName()
+                and
+        equal(s0, "java.time.LocalTime")
+                and
+        s1 = a1.getTargetName()
+                and
+        equal(s1, "LocalTime")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}
