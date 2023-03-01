@@ -1,0 +1,17 @@
+predicate output(int id, int startLineNumber){
+    exists(Method a1, Method a2, Class a3, Class a4, ClassHierarchy a5) {
+        a3 = a5.getSubClass()
+                and
+        a4 = a5.getClass()
+                and
+        a3 = a1.getBelongedClass()
+                and
+        a4 = a2.getBelongedClass()
+                and
+        a2 = a1.getEqSignatureMethod()
+                and
+        id = a3
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

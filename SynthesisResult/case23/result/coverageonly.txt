@@ -1,0 +1,15 @@
+predicate output(int id, int startLineNumber){
+    exists(Method a1, NewExpression a2, Type a3, string s0) {
+        a3=a2.getType()
+                and
+        a1=a2.getMethod()
+                and
+        s0 = a3.getName()
+                and
+        equal(s0, "File")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

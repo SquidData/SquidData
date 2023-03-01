@@ -1,0 +1,33 @@
+predicate output(int id, int startLineNumber){
+    exists(Class a1, Method a2, string s0, string s1) {
+        s0 = a1.getName()
+                and
+        prefix(s0, "A")
+                and
+        a1 = a2.getBelongedClass()
+                and
+        s1 = a2.getName()
+                and
+        equal(s1, "main")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+    }
+    or
+    exists(Class a1, Method a2, string s0, string s1) {
+        s0 = a1.getName()
+                and
+        prefix(s0, "B")
+                and
+        a1 = a2.getBelongedClass()
+                and
+        s1 = a2.getName()
+                and
+        equal(s1, "main")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+    }
+}

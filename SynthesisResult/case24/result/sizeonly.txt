@@ -1,0 +1,11 @@
+predicate output(int id, int startLineNumber){
+    exists(Method a1, Method a2) {
+        a1=a2.getCallee()
+                and
+        a2=a1.getCallee()
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

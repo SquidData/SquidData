@@ -1,0 +1,17 @@
+predicate output(int id, int startLineNumber){
+    exists(Class a1, Method a2, string s0, string s1) {
+        a1=a2.getBelongedClass()
+                and
+        s0 = a2.getName()
+                and
+        equal(s0, "login")
+                and
+        s1 = a1.getName()
+                and
+        prefix(s1, "User")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

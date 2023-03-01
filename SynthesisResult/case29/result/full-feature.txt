@@ -1,0 +1,13 @@
+predicate output(int id, int startLineNumber){
+    exists(Class a1, Interface a2, string s0) {
+        a2=a1.getImplementsInterface()
+                and
+        s0 = a2.getName()
+                and
+        equal(s0, "Comparable")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

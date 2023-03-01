@@ -1,0 +1,37 @@
+predicate output(int id, int startLineNumber){
+    exists(Method a1, Parameter a2, Type a3, string s0, string s1) {
+        s0 = a1.getName()
+                and
+        equal(s0, "f")
+                and
+        a2 = a1.getParameter()
+                and
+        a3 = a2.getType()
+                and
+        s1 = a3.getName()
+                and
+        equal(s1, "Log4jUtils")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+     or   
+     exists(Method a1, Parameter a2, Type a3, string s0, string s1) {
+        s0 = a1.getName()
+                and
+        equal(s0, "g")
+                and
+        a2 = a1.getParameter()
+                and
+        a3 = a2.getType()
+                and
+        s1 = a3.getName()
+                and
+        equal(s1, "Log4jUtils")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}

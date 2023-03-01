@@ -1,0 +1,21 @@
+predicate output(int id, int startLineNumber){
+    exists(Class a1, string s0) {
+        s0 = a1.getName()
+                and
+        equal(s0, "User2")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+    }
+    or
+    exists(Class a1, string s0) {
+        s0 = a1.getName()
+                and
+        equal(s0, "User1")
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+    }
+}

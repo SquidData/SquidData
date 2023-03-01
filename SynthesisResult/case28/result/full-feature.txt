@@ -1,0 +1,9 @@
+predicate output(int id, int startLineNumber){
+    exists(Class a1, ClassHierarchy a2) {
+        a1=a2.getSuperClass()
+                and
+        id = a1
+                and
+        startLineNumber = a1.getLocation().getStartLineNumber()
+     }
+}
